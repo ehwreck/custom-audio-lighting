@@ -1,0 +1,27 @@
+#home{
+  position: relative;
+  margin: -100px;
+  z-index: 9;
+}
+
+@keyframes imageSlider {
+  0%   {width: 125%; left:-100px; top:-100px;}
+  25%  {width: 125%; left:100px; top:0px;}
+  50%  {width: 125%; left:100px; top:100px;}
+  75%  {width: 125%; left:0px; top:100px;}
+  100% {width: 125%; left:-100px; top:-100px;}
+}
+
+.full_view_container{
+  height: 100vh;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    animation-name: imageSlider;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+}
