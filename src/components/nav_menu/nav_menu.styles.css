@@ -1,7 +1,7 @@
 #main_header{
   position: relative;
   z-index: 10;
-  background-color: rgba(209, 209, 209, 0.856);
+  background-color: rgb(255, 255, 255);
   max-height: 100px;
 }
 

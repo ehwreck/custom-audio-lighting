@@ -1,6 +1,6 @@
 #home{
   position: relative;
-  margin: -100px;
+  margin: -100px 0px;
   z-index: 9;
 }
 
@@ -12,16 +12,102 @@
   100% {width: 125%; left:-100px; top:-100px;}
 }
 
+@keyframes opacityControl {
+  0%   {opacity: 1;}
+  25%  {opacity: .9;}
+  26%  {opacity: 0.5;}
+  75%  {opacity: .9;}
+  76%  {opacity: 0.5;}
+  100%  {opacity: .9;}
+}
+
 .full_view_container{
   height: 100vh;
-  overflow: hidden;
-  img {
+  width: 100%;
+  background-color: black;
+  div.animated_background{
     width: 100%;
     height: 100%;
-    position: relative;
-    object-fit: cover;
-    animation-name: imageSlider;
-    animation-duration: 5s;
+    opacity: 1;
+    background: radial-gradient(circle at 50% 60%, rgba(150, 137, 62, 0) 40%, rgb(39, 19, 7, .5) 75%, rgb(39, 19, 7) 100%), radial-gradient(circle, rgb(255, 255, 255,0) 0%, rgb(0, 0, 0) 55%), no-repeat center/35% url("https://images.unsplash.com/photo-1657345594348-d9972004de31?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"), linear-gradient(0deg, rgba(5,5,5,1) 0%, rgba(11,7,4,1) 50%, rgba(5,5,5,1) 100%);
+    animation-name: opacityControl;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
+    position: relative;
+    z-index: 0;
+  }
+  h1 {
+    margin: -975px auto;
+    width: 60%;
+    text-align: center;
+    font-size: 5.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  h1.dark_background {
+    color: white;
+  }
+  p {
+    margin: 975px auto;
+    width: 60%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+  }
+  p.dark_background {
+    color: white;
+  }
+}
+
+@keyframes pulse {
+  0% {width: 50%; height: 50%;}
+  25% {width: 52%; height: 52%;}
+  75% {width: 50%; height: 50%;}
+}
+
+.wrappable_services{
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: space-between;
+  div{
+    width: 50%;
+    height:40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hoverable-box{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background: 0% 30% rgba(0, 0, 0, 0.6);
+      transition: all .25s linear;
+      h2{
+        color: #72BF80;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 800;
+      }
+      p{
+        font-size: 1.25rem;
+        color: white;
+        opacity: 0;
+        transition: all .25s linear;
+      }
+    }
+    .hoverable-box.hovered{
+      width: 50%;
+      height: 50%;
+      border: 5px solid white;
+      animation: pulse 2s .5s infinite ease-out;
+      p{
+        opacity: 1;
+      }
+    }
   }
 }
