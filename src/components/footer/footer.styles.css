@@ -1,5 +1,6 @@
 #footer{
-  background: radial-gradient(circle at 100% 100%, rgb(114, 191, 128), rgb(0, 0, 0));
+  background:  rgb(255, 255, 255);
+  border-top: 5px solid black;
   .container{
     padding: 75px 0px;
     margin: auto;
@@ -20,6 +21,16 @@
         font-size: 1.25rem;
         font-weight: 400;
         line-height: 150%;
+        display: flex;
+        flex-direction: column;
+        a{
+          text-decoration: none;
+          color: black;
+        }
+        a.hovered{
+          color: rgb(229,58,53);
+          font-weight: 600;
+        }
       }
     }
     div:nth-child(1){
@@ -33,12 +44,12 @@
   margin: 0;
   h3{
     font-family: 'Cairo Play', sans-serif;
-    font-size: 2rem!important;
+    font-size: 3rem!important;
     font-weight: 800;
     line-height: 50%;
   }
   p{
-    font-size: 1.25rem;
-    margin: 0px 50px 0px 0px;
+    font-size: 1rem;
+    margin: 0px 100px 0px 0px;
   }
 }

@@ -1,5 +1,9 @@
 import React from 'react';
 import './footer.styles.css';
+import routes from '../../routes/routes';
+import InteractiveLink from '../interactive_link/interactive_link.component';
+import capitalize from '../../helpers/capitalize';
+import LinkDropdown from '../link_dropdown/link_dropdown.component';
 
 const Footer = (props) => {
   return (
@@ -8,23 +12,32 @@ const Footer = (props) => {
         <div id="company-footer">
           <h3>Custom Audio & Lighting</h3>
           <p>
-            Custom Audio & Lighting is your premier partner for bespoke audio,
-            lighting, and video installations. Elevate your environment with our
-            expert craftsmanship, tailored to your unique vision. From immersive
-            audio experiences to dynamic lighting solutions, we bring innovation
-            to every project. Beyond aesthetics, we also offer cutting-edge data
-            and networking services, ensuring seamless connectivity. Illuminate,
-            resonate, and connect with Custom Audio & Lighting - where
-            customization meets excellence.
+            Experience the pinnacle of audio, lighting, and technology solutions
+            with Custom Audio & Lighting. Our unwavering commitment to quality
+            ensures that your vision becomes a reality. Trust us to transform
+            your space into an immersive haven, where innovation meets unmatched
+            expertise.
           </p>
         </div>
-        <div id="services-footer">
-          <h3>Services</h3>
+        <div id="resources-footer">
+          <h3>Resources</h3>
           <ul>
-            <li>Audio</li>
-            <li>Video</li>
-            <li>Lighting</li>
-            <li>Data & Networking</li>
+            {routes.slice(1).map((route) => {
+              if (route.type === 'dropdown-link') {
+                return (
+                  <LinkDropdown route={route}>
+                    {capitalize(route.name)}
+                  </LinkDropdown>
+                );
+              }
+              return (
+                <InteractiveLink
+                  path={route.path}
+                  className="footer-link"
+                  text={capitalize(route.name)}
+                />
+              );
+            })}
           </ul>
         </div>
 
