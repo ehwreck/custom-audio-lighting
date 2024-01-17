@@ -2,41 +2,44 @@ const routes = [
     {
         name: "home",
         path: "/",
+        component: "home",
         type: "link",
-        children: []
     },
     {
         name: "about",
         path: "/about",
+        component: "about",
         type: "link",
-        children: []
     },
     {
-        name: "services",
-        path: "/services",
-        type: "dropdown-link",
-        children: [
-            {
-                name: "audio",
-                path: "/audio",
-                type: "link",
-            },
-            {
-                name: "video",
-                path: "/video",
-                type: "link",
-            },
-            {
-                name: "lighting",
-                path: "/lighting",
-                type: "link",
-            },
-            {
-                name: "data & networking",
-                path: "/data-networking",
-                type: "link",
-            },
-        ]
+        name: "audio",
+        path: "/services/audio",
+        component: "audio",
+        type: "link",
+    },
+    {
+        name: "video",
+        path: "/services/video",
+        component: "video",
+        type: "link",
+    },
+    {
+        name: "lighting",
+        path: "/services/lighting",
+        component: "lighting",
+        type: "link",
+    },
+    {
+        name: "networking",
+        path: "/services/data-networking",
+        component: "data",
+        type: "link",
+    },
+    {
+        name: "billboards",
+        path: "/billboards",
+        component: "billboards",
+        type: "link",
     },
 ]
 
