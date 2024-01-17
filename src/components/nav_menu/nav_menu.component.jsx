@@ -1,5 +1,8 @@
 import React from 'react';
 import './nav_menu.styles.css';
+import LinkDropdown from '../link_dropdown/link_dropdown.component';
+import { Link } from 'react-router-dom';
+import routes from '../../routes/routes';
 
 const NavMenu = (props) => {
   const { showLogo, logoURL, logoAltText, companyName, companyMotto } = props;
@@ -17,11 +20,16 @@ const NavMenu = (props) => {
           </div>
         </div>
         <div id="right_nav_section">
-          <ul id="options">
-            <li>About</li>
-            <li class="active">Services</li>
-            <li>Contact Us</li>
-          </ul>
+          <div id="options">
+            {
+            routes.map(route => {
+              if(route.type === "dropdown-link"){
+                return <LinkDropdown route={route}>{route.name}</LinkDropdown>
+              }
+              return <Link to={route.path}>{route.name}</Link>
+            })
+            }
+          </div>
         </div>
       </div>
     </div>
