@@ -1,7 +1,7 @@
 #main_header{
   position: relative;
   z-index: 10;
-  background-color: rgba(209, 209, 209, 0.856);
+  background-color: rgb(255, 255, 255);
   max-height: 100px;
 }
 
@@ -22,6 +22,7 @@
 }
 
 #nav_menu_name{
+  text-decoration: none;
   font-family: 'Cairo Play', sans-serif;
   color: black;
   font-size: 2.5rem;
@@ -42,16 +43,33 @@
 }
 
 #options{
-  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  li {
+  a {
+    color: black;
+    text-decoration: none;
     display: inline;
     padding: 14px 16px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  a.hovered{
+    color: rgb(229,58,53);
+    font-weight: 600;
   }
   .active {
     font-weight: 800;
+  }
+  :last-child{
+    padding: 10px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.25rem;
+    background: rgb(229,58,53);;
+    margin: 5px 15px;
+    color: white;
+  }
+  :last-child.hovered{
+    transform: scale(1.1);
   }
 }
