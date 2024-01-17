@@ -10,15 +10,14 @@ const InteractiveBox = (props) => {
   return (
     <div
       style={{
-        background: `no-repeat 50% 50% / 100% url(${imageURL})`,
+        background: `no-repeat 50% 50% / cover url(${imageURL})`,
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      className={hovered ? 'hovered' : ''}
     >
-      <div className={hovered ? 'hoverable-box hovered' : 'hoverable-box'}>
-        <h2>{text}</h2>
-        <p>Learn more</p>
-      </div>
+      <h2>{text}</h2>
+      <p>Learn more</p>
     </div>
   );
 };
