@@ -17,7 +17,7 @@ const InteractiveBox = (props) => {
     >
       <div className={hovered ? 'hoverable-box hovered' : 'hoverable-box'}>
         <h2>{text}</h2>
-        <p>Click to learn more</p>
+        <p>Learn more</p>
       </div>
     </div>
   );

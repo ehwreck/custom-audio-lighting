@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './home.styles.css';
 import NavMenu from '../components/nav_menu/nav_menu.component';
 import InteractiveBox from '../components/interactive_box/interactive_box.component';
+import BottomBar from '../components/bottom_bar.component.jsx/bottom_bar.component';
+import Footer from '../components/footer/footer.component';
 
 const Home = (props) => {
   return (
@@ -40,7 +42,10 @@ const Home = (props) => {
             imageURL="https://images.unsplash.com/photo-1551703599-2a53f65da7e7?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
         </div>
+        <div></div>
       </div>
+      <Footer />
+      <BottomBar companyName="Custom Audio & Lighting" />
     </React.Fragment>
   );
 };
