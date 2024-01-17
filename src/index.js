@@ -2,15 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './routes/home';
+import About from './routes/about';
+import Audio from './routes/audio';
+import Video from './routes/video';
+import Lighting from './routes/lighting';
+import Data from './routes/data';
+import Billboards from './routes/billboards';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import routes from './routes/routes';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home/>
-  }
-])
+const Components = {
+  home: Home,
+  about: About,
+  audio: Audio,
+  video: Video,
+  lighting: Lighting,
+  data: Data,
+  billboards: Billboards,
+} 
+
+const router = createBrowserRouter(routes.map(route => ({...route, Component: Components[route.component]})));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
