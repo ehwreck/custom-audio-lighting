@@ -1,0 +1,16 @@
+.i-button{
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  font-size: 1.5rem;
+  line-height: 100%;
+  cursor: pointer;
+}
+
+.i-button.hovered{
+  transform: scale(1.01);
+}
+
+a.i-button{
+  text-decoration: none;
+}

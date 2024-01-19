@@ -1,19 +1,50 @@
 import React, { useState } from 'react';
+import './interactive_button.styles.css';
 
 const InteractiveButton = (props) => {
-  const { text } = props;
+  const { text, type, className, clickHandler, href } = props;
 
   const [hovered, setHovered] = useState(false);
 
+  const getClass = () => {
+    return `i-button ${className} ${hovered ? 'hovered' : ''}`;
+  };
+
+  if (type === 'link') {
+    return (
+      <a
+        className={getClass()}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        href={href}
+      >
+        {text}
+      </a>
+    );
+  }
+
   return (
-    <button
-      className={hovered ? 'hovered' : ''}
+    <input
+      type={type}
+      value={text}
+      className={getClass()}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-    >
-      {text}
-    </button>
+      onClick={
+        clickHandler
+          ? (e) => clickHandler(e)
+          : () => {
+              return true;
+            }
+      }
+      href={href}
+      readOnly
+    />
   );
+};
+
+InteractiveButton.defaultProps = {
+  className: '',
 };
 
 export default InteractiveButton;
