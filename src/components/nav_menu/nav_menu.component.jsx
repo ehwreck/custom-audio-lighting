@@ -41,7 +41,11 @@ const NavMenu = (props) => {
                 />
               );
             })}
-            <InteractiveButton text="Contact Us" />
+            <InteractiveButton
+              text="Contact Us"
+              type="link"
+              href="#contact-us"
+            />
           </div>
         </div>
       </div>
