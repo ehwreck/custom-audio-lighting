@@ -45,7 +45,7 @@ const Footer = (props) => {
           <h3>Contact Us</h3>
           <ul>
             <li>support@customaudiolighting.com</li>
-            <li>4709 N 45th St</li>
+            <li>2709 N 45th St</li>
             <li>McAllen, TX 78501</li>
             <li>+1 (956) 624-2463</li>
           </ul>
