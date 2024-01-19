@@ -2,9 +2,10 @@ import React from 'react';
 import './home.styles.css';
 import NavMenu from '../components/nav_menu/nav_menu.component';
 import InteractiveBox from '../components/interactive_box/interactive_box.component';
-import BottomBar from '../components/bottom_bar.component.jsx/bottom_bar.component';
+import BottomBar from '../components/bottom_bar/bottom_bar.component';
 import Footer from '../components/footer/footer.component';
 import lightingImg from '../assets/images/vecteezy_eco-friendly-solar-lights-brightening-the-outdoors_28638915_662.jpg';
+import ContactForm from '../components/contact_form/contact_form.component';
 
 const Home = (props) => {
   return (
@@ -46,6 +47,7 @@ const Home = (props) => {
           />
         </div>
         <div></div>
+        <ContactForm />
       </div>
       <Footer />
       <BottomBar companyName="Custom Audio & Lighting" />

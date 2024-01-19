@@ -1,25 +1,5 @@
-#main_header{
-  position: relative;
-  z-index: 10;
-  background-color: rgb(255, 255, 255);
-  max-height: 100px;
-}
-
-.nav_menu_container{
-  margin: auto;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-}
-
-#left_nav_section{
-
-}
-
-#company_label{
-  display: flex;
-  flex-direction: column;
-}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default*/
 
 #nav_menu_name{
   text-decoration: none;
@@ -29,47 +9,86 @@
   font-weight: 800;
 }
 
-#nav_menu_motto{
-  position: relative;
-  top: -15px;
-  left: auto;
-  margin-left: auto;
-  color: black;
-}
 
-#right_nav_section{
-  display: flex;
-  align-items: center;
-}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
 
-#options{
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  a {
-    color: black;
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #main_header{
+    position: relative;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    max-height: 100px;
+  }
+  
+  .nav_menu_container{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #company_label{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #nav_menu_name{
     text-decoration: none;
-    display: inline;
-    padding: 14px 16px;
-    font-size: 1.25rem;
-  }
-  a.hovered{
-    color: rgb(229,58,53);
-    font-weight: 600;
-  }
-  .active {
+    font-family: 'Cairo Play', sans-serif;
+    color: black;
+    font-size: 2.5rem;
     font-weight: 800;
   }
-  :last-child{
-    padding: 10px 35px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.25rem;
-    background: rgb(229,58,53);;
-    margin: 5px 15px;
-    color: white;
+  
+  #nav_menu_motto{
+    position: relative;
+    top: -15px;
+    left: auto;
+    margin-left: auto;
+    color: black;
   }
-  :last-child.hovered{
-    transform: scale(1.1);
+  
+  #right_nav_section{
+    display: flex;
+    align-items: center;
+  }
+  
+  #options{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    a {
+      color: black;
+      text-decoration: none;
+      display: inline;
+      padding: 14px 16px;
+      font-size: 1.25rem;
+    }
+    a.hovered{
+      color: rgb(229,58,53);
+      font-weight: 600;
+    }
+    .active {
+      font-weight: 800;
+    }
+    :last-child{
+      padding: 10px 35px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.25rem;
+      background: rgb(229,58,53);;
+      margin: 5px 15px;
+      color: white;
+      line-height: 2.75rem;
+    }
+    :last-child.hovered{
+      color: white;
+      transform: scale(1.1);
+    }
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Audio = () => {};
+const Audio = () => {
+  return <div>This is the Audio page.</div>;
+};
 
 export default Audio;
