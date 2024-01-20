@@ -16,7 +16,7 @@ const InteractiveBox = (props) => {
       onMouseLeave={() => setHovered(false)}
       className={hovered ? 'hovered' : ''}
     >
-      <h2>{text}</h2>
+      <h3>{text}</h3>
       <p>Learn more</p>
     </div>
   );
