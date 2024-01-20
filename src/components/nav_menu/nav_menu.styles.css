@@ -1,94 +1,165 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default*/
+.hidden{
+  display: none!important;
+}
 
-#nav_menu_name{
-  text-decoration: none;
-  font-family: 'Cairo Play', sans-serif;
-  color: black;
-  font-size: 2.5rem;
+.active{
   font-weight: 800;
 }
 
+#main-header{
+  background: white;
+  height: 75px;
+}
+
+#nav-menu-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#left-nav-section{
+  width: 50%;
+  display: inline-block;
+}
+
+/* Inside left-nav-section */
+#company-label{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding: 10px 15px;
+}
+
+#company-label > a {
+  font-family: 'Cairo Play', sans-serif;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 120%;
+  text-decoration: none;
+  color: black;
+}
+
+#company-label > span {
+  text-align: right;
+  color: black;
+}
+/* End of left-nav-section */
+
+#right-nav-section{
+  width: 50%;
+  display: inline-block;
+}
+
+/* Inside right-nav-section */
+#right-nav-section > #collapsible-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+#options {
+  position: absolute;
+  z-index: 1;
+  top: 75px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-top: 3px solid black;
+  padding: 0px;
+  width: 100%;
+}
+
+#options > a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+  padding: 10px 0px;
+  margin: 0px 15px;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+#options > a.hovered{
+  color:red;
+}
+/* End of right-nav-section */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+}
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #main_header{
-    position: relative;
-    z-index: 10;
-    background-color: rgb(255, 255, 255);
-    max-height: 100px;
-  }
   
-  .nav_menu_container{
+  #main-header{
+    height: 100px;
+  }
+
+  #nav-menu-container{
+    width: 90%;
     margin: auto;
-    width: 80%;
+    overflow-x: hidden;
     display: flex;
     justify-content: space-between;
   }
   
-  #company_label{
+  #left-nav-section{
+    width: max-content;
+  }
+  
+  /* Inside left-nav-section */
+  #company-label{
     display: flex;
     flex-direction: column;
+    width: max-content;
+    margin-right: auto;
+    padding: 10px 15px;
   }
   
-  #nav_menu_name{
-    text-decoration: none;
-    font-family: 'Cairo Play', sans-serif;
-    color: black;
-    font-size: 2.5rem;
-    font-weight: 800;
+  #company-label > a {
+    font-size: 2rem;
+  }
+  /* End of left-nav-section */
+
+  #right-nav-section{
+    width: max-content;
   }
   
-  #nav_menu_motto{
-    position: relative;
-    top: -15px;
-    left: auto;
-    margin-left: auto;
-    color: black;
-  }
-  
-  #right_nav_section{
+  /* Inside right-nav-section */
+  #options {
+    position: static;
     display: flex;
+    flex-direction: row;
+    align-content: flex-end;
     align-items: center;
+    border-top: none;
+    width: max-content;
   }
   
-  #options{
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    a {
-      color: black;
-      text-decoration: none;
-      display: inline;
-      padding: 14px 16px;
-      font-size: 1.25rem;
-    }
-    a.hovered{
-      color: rgb(229,58,53);
-      font-weight: 600;
-    }
-    .active {
-      font-weight: 800;
-    }
-    :last-child{
-      padding: 10px 35px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.25rem;
-      background: rgb(229,58,53);;
-      margin: 5px 15px;
-      color: white;
-      line-height: 2.75rem;
-    }
-    :last-child.hovered{
-      color: white;
-      transform: scale(1.1);
-    }
+  #options > a {
+    font-size: 1.25rem;
+    padding: 0px;
+    margin: 0px 5px;
+    border-bottom: none;
+  }
+  
+  #options > a.hovered{
+    color:red;
+  }
+}
+
+@media (min-width: 1350px) {
+  #company-label > a {
+    font-size: 2.5rem;
   }
 }
