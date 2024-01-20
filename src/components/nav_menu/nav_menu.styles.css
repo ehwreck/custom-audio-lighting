@@ -78,15 +78,30 @@
 #options > a {
   text-decoration: none;
   color: black;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 10px 0px;
   margin: 0px 15px;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
   text-align: center;
+}
+
+#options > a:first-child{
+  border-top: none;
+}
+
+#options > a:last-child{
+  background: rgb(229,58,53);
+  border-top: none;
+  margin: 0px 10px 10px 10px;
 }
 
 #options > a.hovered{
   color:red;
+  font-weight: 600;
+}
+
+#options > a:last-child.hovered{
+  color: black
 }
 /* End of right-nav-section */
 
@@ -125,10 +140,6 @@
     margin-right: auto;
     padding: 10px 15px;
   }
-  
-  #company-label > a {
-    font-size: 2rem;
-  }
   /* End of left-nav-section */
 
   #right-nav-section{
@@ -147,10 +158,16 @@
   }
   
   #options > a {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 0px;
     margin: 0px 5px;
-    border-bottom: none;
+    border-top: none;
+  }
+
+  #options > a:last-child {
+    margin: 0px 0px 0px 10px;
+    padding: 10px 20px;
+    border-radius: 15px;
   }
   
   #options > a.hovered{
@@ -158,8 +175,37 @@
   }
 }
 
-@media (min-width: 1350px) {
+@media (min-width: 1300px) {
+  #company-label > a {
+    font-size: 2rem;
+  }
+
+  #options > a {
+    font-size: 1.10rem;
+    padding: 0px;
+    margin: 0px 10px;
+    border-top: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  #company-label > a {
+    font-size: 2.25rem;
+  }
+  
+  #options > a {
+    font-size: 1.20rem;
+    margin: 0px 15px;
+  }
+}
+
+@media (min-width: 1500px) {
   #company-label > a {
     font-size: 2.5rem;
+  }
+  
+  #options > a {
+    font-size: 1.25rem;
+    margin: 0px 15px;
   }
 }
