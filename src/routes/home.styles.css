@@ -14,7 +14,7 @@
   width: 80%;
   margin: 0px auto;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -37,7 +37,7 @@
 
 #work-cta > h3 {
   color:black;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0px;
 }
@@ -54,7 +54,7 @@
 #services > h2 {
   width: 80%;
   margin: 0px auto 50px auto;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 400;
@@ -82,6 +82,7 @@
   font-weight: 400;
   background: rgba(255, 255, 255, 0.75);
   padding: 10px 10px;
+  transition: all .25s linear;
 }
 
 #services > div > div > p {
@@ -91,16 +92,15 @@
   transition: all .25s linear;
 }
 
-#services > div > div.hovered {
-  height: 500px;
-}
 #services > div > div.hovered > h3{
-  color: white;
-  background: black;
-  padding: 10px 10px;
+  color: black;
+  background: white;
+  padding: 25px 10px;
+  transition: all .25s linear;
 }
 #services > div > div.hovered > p{
   opacity: 1;
+  transition: all .25s linear;
 }
 
 @media (min-width: 768px) {
@@ -183,10 +183,9 @@
     height: 30vh;
     width: 50%;
   }
-  #services > div > div.hovered > h3{
+  #services > div > div.hovered > h3 {
     font-size: 2.25rem;
-    color: black;
-    background: white;
+    padding: 10px 10px;
   }
 }
 
