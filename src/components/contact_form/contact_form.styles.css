@@ -1,6 +1,45 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default*/
+
+#contact-us{
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-us > h2 {
+  padding: 0px 0px 50px 0px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+#contact-us > div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #contact-us > div {
+    border-top: 5px solid black;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0px 0px 0px 0px;
+    background: white;
+  }
+}
+
+/* Used to adjust navigation bar title to give space between left and right nav sections. */
+@media (min-width: 1350px) {
 #contact-us{
   padding: 0px 0px 0px 0px;
-  /* border-top: 5px solid black; */
   background: white;
 }
 
@@ -67,4 +106,5 @@
 #contact-form > input[type="submit"]{
   background: rgb(114,191,128);
   color: black;
+}
 }
