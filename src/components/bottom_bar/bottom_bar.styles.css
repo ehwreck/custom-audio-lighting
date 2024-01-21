@@ -1,7 +1,29 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default*/
+
 .bottom-bar{
   background-color: black;
   color: white;
-  font-size: 1rem;
+  font-size: .5rem;
   text-align: center;
   padding: 10px 0px;
 }
+
+@media (min-width: 768px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .bottom-bar{
+    font-size: 1rem;
+  }
+}
+
+/* Used to adjust navigation bar title to give space between left and right nav sections. */
+@media (min-width: 1350px) {
+}
+
