@@ -81,7 +81,7 @@
   font-size: 2rem;
   font-weight: 400;
   background: rgba(255, 255, 255, 0.75);
-  padding: 10px 10px;
+  padding: 10px 0px;
   transition: all .25s linear;
 }
 
@@ -95,7 +95,7 @@
 #services > div > div.hovered > h3{
   color: black;
   background: white;
-  padding: 25px 10px;
+  padding: 25px 0px;
   transition: all .25s linear;
 }
 #services > div > div.hovered > p{
@@ -154,7 +154,7 @@
     font-size: 1.5rem;
     margin-bottom: 24px;
   }
-  
+
   #services > h2 {
     font-size: 2rem;
   }
@@ -162,13 +162,13 @@
   #services > div {
     width: 90%;
     margin: auto;
-    padding: 50px 0px;
+    padding: 0px 0px;
     display: flex;
   }
   
   #services > div > div {
     width: 25%;
-    height: 30vh;
+    height: 60vh;
   }
   
   #services > div > div > h3 {
@@ -180,7 +180,7 @@
   }
   
   #services > div > div.hovered {
-    height: 30vh;
+    height: 60vh;
     width: 50%;
   }
   #services > div > div.hovered > h3 {
@@ -210,7 +210,7 @@
   #services > div {
     width: 90%;
     margin: auto;
-    padding: 50px 0px;
+    padding: 0px 0px;
     display: flex;
   }
   
