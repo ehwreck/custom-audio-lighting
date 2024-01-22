@@ -11,7 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 const NavMenu = (props) => {
-  const { showLogo, logoURL, logoAltText, companyName, companyMotto } = props;
+  const { showLogo, logoURL, logoAltText } = props;
   const { width } = useWindowDimensions();
 
   const [showCollapsibleMenu, setShowCollapsibleMenu] = useState(width < 1200);
@@ -29,10 +29,8 @@ const NavMenu = (props) => {
             <img id="nav_menu_logo" src={logoURL} alt={logoAltText} />
           )}
           <div id="company-label">
-            <Link to="/">
-              {companyName}
-            </Link>
-            <span>{companyMotto}</span>
+            <Link to="/">Custom Audio & Lighting</Link>
+            <span>Your spaces done right!</span>
           </div>
         </div>
         <div id='right-nav-section'>

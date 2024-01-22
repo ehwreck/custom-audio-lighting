@@ -7,22 +7,33 @@ import Audio from './routes/audio';
 import Video from './routes/video';
 import Lighting from './routes/lighting';
 import Data from './routes/data';
-import Billboards from './routes/billboards';
+import Signage from './routes/signage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import routes from './routes/routes';
+import NavMenu from './components/nav_menu/nav_menu.component';
+import Footer from './components/footer/footer.component';
 
 const Components = {
-  home: Home,
-  about: About,
-  audio: Audio,
-  video: Video,
-  lighting: Lighting,
-  data: Data,
-  billboards: Billboards,
-} 
+  home: <Home/>,
+  about: <About/>,
+  audio: <Audio/>,
+  video: <Video/>,
+  lighting: <Lighting/>,
+  data: <Data/>,
+  Signage: <Signage/>,
+}
 
-const router = createBrowserRouter(routes.map(route => ({...route, Component: Components[route.component]})));
+const page = (component) => {
+  console.log(component);
+  return <React.Fragment>
+    <NavMenu/>
+    {Components[component]}
+    <Footer/>
+  </React.Fragment>
+}
+
+const router = createBrowserRouter(routes.map(route => ({...route, element: page(route.component)})));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

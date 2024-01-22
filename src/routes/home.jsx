@@ -1,19 +1,12 @@
 import React from 'react';
 import './home.styles.css';
-import NavMenu from '../components/nav_menu/nav_menu.component';
 import InteractiveBox from '../components/interactive_box/interactive_box.component';
-import BottomBar from '../components/bottom_bar/bottom_bar.component';
-import Footer from '../components/footer/footer.component';
 import lightingImg from '../assets/images/vecteezy_eco-friendly-solar-lights-brightening-the-outdoors_28638915_662.jpg';
 import ContactForm from '../components/contact_form/contact_form.component';
 
 const Home = (props) => {
   return (
     <React.Fragment>
-      <NavMenu
-        companyName="Custom Audio & Lighting"
-        companyMotto="Your spaces done right!"
-      />
       <div id="home">
         <div className="full-view-container">
           <h1>
@@ -49,8 +42,6 @@ const Home = (props) => {
         </div>
         <ContactForm />
       </div>
-      <Footer />
-      <BottomBar companyName="Custom Audio & Lighting" />
     </React.Fragment>
   );
 };

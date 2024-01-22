@@ -4,6 +4,7 @@ import routes from '../../routes/routes';
 import InteractiveLink from '../interactive_link/interactive_link.component';
 import capitalize from '../../helpers/capitalize';
 import LinkDropdown from '../link_dropdown/link_dropdown.component';
+import BottomBar from '../bottom_bar/bottom_bar.component';
 
 const Footer = (props) => {
   return (
@@ -51,6 +52,7 @@ const Footer = (props) => {
           </ul>
         </div>
       </div>
+      <BottomBar companyName="Custom Audio & Lighting"/>
     </div>
   );
 };

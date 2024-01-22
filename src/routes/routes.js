@@ -36,9 +36,9 @@ const routes = [
         type: "link",
     },
     {
-        name: "billboards",
-        path: "/billboards",
-        component: "billboards",
+        name: "signage",
+        path: "/signage",
+        component: "signage",
         type: "link",
     },
 ]
