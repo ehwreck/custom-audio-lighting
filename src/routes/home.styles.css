@@ -2,9 +2,12 @@
 /* No media query since this is the default*/
 
 .full-view-container {
-  height: 35vh;
-  width: 100%;
-  background: no-repeat 50% 0% / 100% url('../assets/images/vecteezy_landscaped-garden-with-concrete-stairs-and-decorative_24630332_251.jpg');
+  width: 90%;
+  margin: 0px auto 25px auto;
+  padding: 100px 0px;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background: no-repeat 0% 50% / cover url('../assets/images/vecteezy_landscaped-garden-with-concrete-stairs-and-decorative_24630332_251.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +16,7 @@
 .full-view-container > h1 {
   width: 80%;
   margin: 0px auto;
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   color: white;
 }
@@ -21,14 +24,18 @@
 .full-view-container > p {
   width: 80%;
   margin: 0px auto;
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   color: white;
 }
 
 #work-cta {
+  width: 90%;
+  margin: 25px auto;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   height: 100px;
-  background:rgb(191, 250, 202);
+  background: rgb(191, 250, 202);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +55,11 @@
 }
 
 #services {
-  padding: 50px 0px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 50px 0px 20px 0px;
 }
 
 #services > h2 {
@@ -65,40 +76,60 @@
 }
 
 #services > div > div {
-  width: 100%;
+  width: 90%;
+  margin: 0px auto 25px auto;
+  border-radius: 25px;
   height: 300px;
+  transition: all .25s linear;
+}
+
+#services > div > div:last-child {
+  margin-bottom: 0px;
+}
+
+#services > div > div > div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all .25s linear;
 }
 
-#services > div > div > h3 {
-  color: black;
+#services > div > div > div > h3 {
+  color: rgb(191, 250, 202);
   text-align: center;
   width: 100%;
-  font-size: 2rem;
-  font-weight: 400;
-  background: rgba(255, 255, 255, 0.75);
+  font-size: 3rem;
+  font-weight: 600;
+  /* background: rgba(255, 255, 255, 0.75); */
   padding: 10px 0px;
   transition: all .25s linear;
+  margin: 0px;
 }
 
-#services > div > div > p {
+#services > div > div > div > a {
   font-size: 1rem;
-  color: white;
+  font-weight: 400;
+  color: black;
   opacity: 0;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  background-color: white;
+  border-radius: 25px;
   transition: all .25s linear;
+  text-decoration: none;
 }
 
-#services > div > div.hovered > h3{
+/* #services > div > div.hovered > div > h3{
   color: black;
   background: white;
   padding: 25px 0px;
   transition: all .25s linear;
-}
-#services > div > div.hovered > p{
+} */
+#services > div > div.hovered > div > a{
   opacity: 1;
   transition: all .25s linear;
 }
@@ -136,6 +167,11 @@
 @media (min-width: 1200px) {
   .full-view-container{
     height: 60vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+    box-shadow: none;
   }
 
   .full-view-container > h1 {
@@ -148,11 +184,22 @@
 
   #work-cta {
     height: 200px;
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px;
+    box-shadow: none;
   }
   
   #work-cta > h3{
     font-size: 1.5rem;
     margin-bottom: 24px;
+  }
+
+  #services {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 50px 0px;
   }
 
   #services > h2 {
@@ -167,15 +214,18 @@
   }
   
   #services > div > div {
+    width: 95%;
+    margin: 0px auto;
+    border-radius: 0px;
     width: 25%;
     height: 60vh;
   }
   
-  #services > div > div > h3 {
+  #services > div > div > div > h3 {
     background: rgb(255, 255, 255);
   }
 
-  #services > div > div > p {
+  #services > div > div > div > p {
     font-size: 1.25rem;
   }
   
@@ -183,7 +233,7 @@
     height: 60vh;
     width: 50%;
   }
-  #services > div > div.hovered > h3 {
+  #services > div > div.hovered > div > h3 {
     font-size: 2.25rem;
     padding: 10px 10px;
   }
@@ -219,11 +269,11 @@
     height: 60vh;
   }
 
-  #services > div > div > h3 {
+  #services > div > div > div > h3 {
     font-size: 3rem;
   }
 
-  #services > div > div > p {
+  #services > div > div > div > p {
     font-size: 1.5rem;
   }
   
@@ -231,7 +281,7 @@
     height: 60vh;
   }
 
-  #services > div > div.hovered > h3{
+  #services > div > div.hovered > div > h3{
     font-size: 3rem;
   }
 }

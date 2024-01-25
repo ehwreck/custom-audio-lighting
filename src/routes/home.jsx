@@ -27,16 +27,18 @@ const Home = (props) => {
             <InteractiveBox
               text="Audio"
               imageURL="https://images.unsplash.com/photo-1633455711664-16bad5edb375?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              // imageURL="https://images.unsplash.com/photo-1531104985437-603d6490e6d4?q=80&w=2639&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              path="/services/audio"
             />
             <InteractiveBox
               text="Video"
               imageURL="https://images.unsplash.com/photo-1699134816591-b4104e23eaa9?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              path="/services/video"
             />
             <InteractiveBox text="Lighting" imageURL={lightingImg} />
             <InteractiveBox
               text="Networking"
               imageURL="https://images.unsplash.com/photo-1551703599-2a53f65da7e7?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              path="/services/data"
             />
           </div>
         </div>
