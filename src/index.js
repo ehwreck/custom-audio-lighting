@@ -21,11 +21,10 @@ const Components = {
   video: <Video/>,
   lighting: <Lighting/>,
   data: <Data/>,
-  Signage: <Signage/>,
+  signage: <Signage/>,
 }
 
 const page = (component) => {
-  console.log(component);
   return <React.Fragment>
     <NavMenu/>
     {Components[component]}
