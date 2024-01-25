@@ -104,7 +104,6 @@
   width: 100%;
   font-size: 3rem;
   font-weight: 600;
-  /* background: rgba(255, 255, 255, 0.75); */
   padding: 10px 0px;
   transition: all .25s linear;
   margin: 0px;
@@ -208,21 +207,26 @@
   
   #services > div {
     width: 90%;
-    margin: auto;
-    padding: 0px 0px;
+    margin: 0px auto;
     display: flex;
   }
   
   #services > div > div {
-    width: 95%;
-    margin: 0px auto;
-    border-radius: 0px;
     width: 25%;
+    margin: 0px;
+    border-radius: 0px;
     height: 60vh;
+  }
+
+  #services > div > div > div {
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0);
   }
   
   #services > div > div > div > h3 {
-    background: rgb(255, 255, 255);
+    font-size: 2.75rem;
   }
 
   #services > div > div > div > p {
@@ -233,8 +237,9 @@
     height: 60vh;
     width: 50%;
   }
+
   #services > div > div.hovered > div > h3 {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     padding: 10px 10px;
   }
 }
@@ -257,13 +262,6 @@
     font-size: 2.5rem;
   }
   
-  #services > div {
-    width: 90%;
-    margin: auto;
-    padding: 0px 0px;
-    display: flex;
-  }
-  
   #services > div > div {
     width: 25%;
     height: 60vh;
@@ -275,10 +273,6 @@
 
   #services > div > div > div > p {
     font-size: 1.5rem;
-  }
-  
-  #services > div > div.hovered {
-    height: 60vh;
   }
 
   #services > div > div.hovered > div > h3{
