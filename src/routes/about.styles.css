@@ -1,0 +1,79 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default*/
+
+#about > div {
+    width: 95%;
+    margin: 0px auto 50px auto;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about > div:nth-child(1){
+    background: 0 50% / 100% url('../assets/images/vecteezy_eco-friendly-solar-lights-brightening-the-outdoors_28638915_662.jpg');
+    color: white;
+}
+
+#about > div > div {
+    width: 80%;
+    margin: auto;
+}
+
+#about > div > h2{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    font-size:  2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#about > div > div > h1 {
+    width: max-content;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid white;
+}
+
+#about {
+    h2{
+        font-size: 1rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    h3 {
+        font-family: "Sacramento", cursive;
+        font-size: 2rem;
+        font-size: 200;
+        margin-top: 0px;
+        border-bottom: 1px solid black;
+    }
+    .max-width-img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Used to adjust navigation bar title to give space between left and right nav sections. */
+@media (min-width: 1350px) {
+}
